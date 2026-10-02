@@ -299,7 +299,7 @@ PrefabInstance:
     - target: {fileID: -1372456973505535881, guid: 16edabcd5bc684544bda3afae5e58a94, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: cbad5a4c166fbbf4b862bcd3c9be4244, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 16edabcd5bc684544bda3afae5e58a94, type: 3}
       propertyPath: m_Name
       value: LPWardrobe
@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 013021544380d5742b0e461f69ab9acf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7696e718216351748b99276d8d85e2e2, type: 2}
     - target: {fileID: 919132149155446097, guid: 013021544380d5742b0e461f69ab9acf, type: 3}
       propertyPath: m_Name
       value: LPBarrel_01
@@ -524,6 +528,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8f5751e02e6aa4f438bc9fab71f2ccdc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afd504e3b165b840961887924f59cb1, type: 2}
     - target: {fileID: 919132149155446097, guid: 8f5751e02e6aa4f438bc9fab71f2ccdc, type: 3}
       propertyPath: m_Name
       value: LPBox
@@ -581,6 +589,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1723224909654377422, guid: cf4b8cb242ccf324b949ca3000730ebc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7498a44d2b89b5e42aad6b337f63b527, type: 2}
     - target: {fileID: 919132149155446097, guid: cf4b8cb242ccf324b949ca3000730ebc, type: 3}
       propertyPath: m_Name
       value: lantern
@@ -912,6 +924,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: c45febabac1cb3f42a8c69188c171e6d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e14a796cb662434da432717d62e9e03, type: 2}
     - target: {fileID: 919132149155446097, guid: c45febabac1cb3f42a8c69188c171e6d, type: 3}
       propertyPath: m_Name
       value: LP_TV
@@ -1093,6 +1109,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8f5751e02e6aa4f438bc9fab71f2ccdc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afd504e3b165b840961887924f59cb1, type: 2}
     - target: {fileID: 919132149155446097, guid: 8f5751e02e6aa4f438bc9fab71f2ccdc, type: 3}
       propertyPath: m_Name
       value: LPBox_01
@@ -1467,6 +1487,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 013021544380d5742b0e461f69ab9acf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7696e718216351748b99276d8d85e2e2, type: 2}
     - target: {fileID: 919132149155446097, guid: 013021544380d5742b0e461f69ab9acf, type: 3}
       propertyPath: m_Name
       value: LPBarrel
@@ -1576,6 +1600,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1723224909654377422, guid: cf4b8cb242ccf324b949ca3000730ebc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7498a44d2b89b5e42aad6b337f63b527, type: 2}
     - target: {fileID: 919132149155446097, guid: cf4b8cb242ccf324b949ca3000730ebc, type: 3}
       propertyPath: m_Name
       value: lantern_01
@@ -1923,6 +1951,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8f5751e02e6aa4f438bc9fab71f2ccdc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afd504e3b165b840961887924f59cb1, type: 2}
     - target: {fileID: 919132149155446097, guid: 8f5751e02e6aa4f438bc9fab71f2ccdc, type: 3}
       propertyPath: m_Name
       value: LPBox_01
@@ -3167,6 +3199,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8f5751e02e6aa4f438bc9fab71f2ccdc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afd504e3b165b840961887924f59cb1, type: 2}
     - target: {fileID: 919132149155446097, guid: 8f5751e02e6aa4f438bc9fab71f2ccdc, type: 3}
       propertyPath: m_Name
       value: LPBox
