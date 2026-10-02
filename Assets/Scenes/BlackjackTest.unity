@@ -690,6 +690,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7680174771004219947, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682045552025482614, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2825,6 +2833,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b930e7d4d3d990b468e2f9307dd6e1d4, type: 3}
       propertyPath: m_Name
       value: LPChair_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b930e7d4d3d990b468e2f9307dd6e1d4, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
