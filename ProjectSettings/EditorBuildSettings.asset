@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 98427eecc6c473a48b6c3c0099271cf4
+  - enabled: 1
+    path: Assets/Scenes/PenguinDen.unity
+    guid: d0052fcd9957cae4f85819c60f24717f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2de4f137685adb3498f806b360053c7e, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
