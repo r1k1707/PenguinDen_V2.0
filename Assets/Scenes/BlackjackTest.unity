@@ -2282,6 +2282,7 @@ GameObject:
   - component: {fileID: 1170186518}
   - component: {fileID: 1170186517}
   - component: {fileID: 1170186516}
+  - component: {fileID: 1170186519}
   m_Layer: 0
   m_Name: PlayingCards
   m_TagString: Untagged
@@ -2430,6 +2431,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+--- !u!114 &1170186519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170186515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437949398be5cba4da921c77e637bd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardFlipper
+  scaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.050434113
+      inSlope: -0.09605733
+      outSlope: -0.09605733
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5007103
+      value: 0.0023372173
+      inSlope: 0.00013665482
+      outSlope: 0.00013665482
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.050434113
+      inSlope: 0.09633064
+      outSlope: 0.09633064
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 0.5
 --- !u!4 &1186379735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b930e7d4d3d990b468e2f9307dd6e1d4, type: 3}
