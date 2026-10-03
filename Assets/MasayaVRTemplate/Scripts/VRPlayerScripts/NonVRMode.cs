@@ -104,18 +104,7 @@ public class NonVRMode : MonoBehaviour, IInputInteract, IInputGrab
         if (!init)
             return;
 
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            focused = false;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            focused = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+
 
         if (!focused)
             return;

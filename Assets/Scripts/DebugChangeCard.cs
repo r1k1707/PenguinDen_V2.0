@@ -15,16 +15,17 @@ public class DebugChangeCard : MonoBehaviour
     {
         if (GUI.Button(new Rect(10, 10, 100, 28), "Hit me!"))
         {
-            cardModel.cardIndex = cardIndex;
-            cardModel.ToggleFace(true);
-
-            cardIndex++;
-        }
-
-        if (cardIndex == 52)
-        {
-            cardIndex = 0;
-            cardModel.ToggleFace(false);
+            if (cardIndex >= cardModel.faces.Length)
+            {
+                cardIndex = 0;
+                cardModel.ToggleFace(false);
+            }
+            else
+            {
+                cardModel.cardIndex = cardIndex;
+                cardModel.ToggleFace(true);
+                cardIndex++;
+            }
         }
     }
 }
