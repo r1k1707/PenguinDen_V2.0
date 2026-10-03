@@ -104,7 +104,7 @@ public class NonVRMode : MonoBehaviour, IInputInteract, IInputGrab
         if (!init)
             return;
 
-
+        
 
         if (!focused)
             return;
