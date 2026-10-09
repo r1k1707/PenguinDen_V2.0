@@ -117,7 +117,6 @@ public class NonVRMode : MonoBehaviour, IInputInteract, IInputGrab
             Cursor.visible = false;
         }
 
-
         if (!focused)
             return;
 
