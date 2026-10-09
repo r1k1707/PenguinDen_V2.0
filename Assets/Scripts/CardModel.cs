@@ -10,6 +10,8 @@ public class CardModel : MonoBehaviour
 
     public void ToggleFace(bool showFace)
     {
+        Debug.Log("Toggle Face");
+
         if (showFace)
         {
             spriteRenderer.sprite = faces[cardIndex];
