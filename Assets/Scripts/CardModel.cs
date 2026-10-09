@@ -2,28 +2,39 @@ using UnityEngine;
 
 public class CardModel : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
+    private SpriteRenderer _renderer;
+    private CardFlipper flipper;
     public Sprite[] faces;
     public Sprite cardBack;
-
-    public int cardIndex;
+    public int cardIndex = 0; // e.g. faces[cardIndex];
 
     public void ToggleFace(bool showFace)
     {
-        Debug.Log("Toggle Face");
-
         if (showFace)
         {
-            spriteRenderer.sprite = faces[cardIndex];
+            flipper.FlipCard(faces[cardIndex - 1], faces[cardIndex], cardIndex);
         }
         else
         {
-            spriteRenderer.sprite = cardBack;
+            flipper.FlipCard(cardBack, faces[cardIndex], cardIndex);
         }
     }
 
-    private void Awake()
+    public void ToggleFaceNoAnimation(bool showFace)
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (showFace)
+        {
+            _renderer.sprite = faces[cardIndex];
+        }
+        else
+        {
+            _renderer.sprite = cardBack;
+        }
+    }
+
+    void Awake()
+    {
+        _renderer = GetComponent<SpriteRenderer>();
+        flipper = GetComponent<CardFlipper>();
     }
 }

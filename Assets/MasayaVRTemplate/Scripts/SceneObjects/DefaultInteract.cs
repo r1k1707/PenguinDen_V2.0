@@ -10,7 +10,7 @@ public class DefaultInteract : MonoBehaviour, IInteractable
     {
         if (!canInteractAgain)
         {
-            gameObject.tag = "Untagged";
+            gameObject.tag = "Interactable";
         }
 
         InteractEvent.Invoke();
