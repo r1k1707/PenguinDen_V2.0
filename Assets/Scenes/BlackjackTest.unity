@@ -710,6 +710,10 @@ PrefabInstance:
       propertyPath: objList.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8550494785859207240, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 8682045552025482614, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
       propertyPath: m_TagString
       value: GameController
