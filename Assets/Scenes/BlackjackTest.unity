@@ -614,6 +614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR_Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 1293590870800188673, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1729463331589477704, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.173
@@ -658,6 +662,10 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: dc261e200c4cc014fa1f27d04ea7815e, type: 2}
+    - target: {fileID: 2970415814894971012, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
+      propertyPath: m_UseRelativeTransform
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3294917786715119785, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.336
@@ -1934,7 +1942,7 @@ GameObject:
   - component: {fileID: 963834111}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
