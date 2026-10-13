@@ -6,18 +6,16 @@ public class CardModel : MonoBehaviour
     private CardFlipper flipper;
     public Sprite[] faces;
     public Sprite cardBack;
-    public int cardIndex = 0; // e.g. faces[cardIndex];
+    public int cardIndex;
 
     public void ToggleFace(bool showFace)
     {
-        if (showFace)
+        if (cardIndex < 0 || cardIndex >= faces.Length)
         {
-            flipper.FlipCard(faces[cardIndex - 1], faces[cardIndex], cardIndex);
+            Debug.LogError($"Invalid cardIndex: {cardIndex}. " + $"The faces array contains {faces.Length} sprites.", gameObject);
+            return;
         }
-        else
-        {
-            flipper.FlipCard(cardBack, faces[cardIndex], cardIndex);
-        }
+
     }
 
     public void ToggleFaceNoAnimation(bool showFace)
