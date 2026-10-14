@@ -8,11 +8,19 @@ public class GameController : MonoBehaviour
     private bool playerTurn;
     private bool gameOver;
 
+    [Header("Money System")]
+    public int startingMoney;
+    public int betAmount;
+    public TMP_Text moneyText;
+    public TMP_Text betText;
+    private int money;
+
+    [Header("References")]
     public CardStack player;
     public CardStack dealer;
     public CardStack deck;
-
-    public TextMeshPro winnerText;
+    public TMP_Text winnerText;
+    public GameObject exitGameObject;
 
     public void Hit()
     {
@@ -54,26 +62,128 @@ public class GameController : MonoBehaviour
 
         winnerText.text = "";
         dealersFirstCard = -1;
-        gameOver = false;
+        gameOver = true;
+        playerTurn = false;
 
-        StartGame();
+        if (winnerText != null)
+        {
+            winnerText.text = "Choose your bet!";
+            winnerText.enabled = true;
+        }
     }
 
     private void Start()
     {
+        money = startingMoney;
+        UpdateMoneyDisplay();
+        UpdateBetDisplay();
+        gameOver = true;
+
+        if (winnerText != null)
+        {
+            winnerText.text = "Choose your bet!";
+            winnerText.enabled = true;
+        }
+        if (exitGameObject != null)
+        {
+            exitGameObject.SetActive(false);
+        }
+    }
+    public void StartRound()
+    {
+        if (!gameOver)
+            return;
+
         StartGame();
+    }
+
+    private void UpdateMoneyDisplay()
+    {
+        if (moneyText != null)
+        {
+            moneyText.text = "Money: $" + money;
+        }
+    }
+    private void UpdateBetDisplay()
+    {
+        if (betText != null)
+        {
+            betText.text = "You bet: $" + betAmount;
+        }
+    }
+    public void SetBet(int amount)
+    {
+        if (playerTurn || !gameOver)
+            return;
+
+        if (amount <= 0 || amount > money)
+            return;
+
+        betAmount = amount;
+        UpdateBetDisplay();
+        Debug.Log("Bet selected: $" + betAmount);
+    }
+    public void AllIn()
+    {
+        if (playerTurn || !gameOver)
+            return;
+
+        if (money <= 0)
+            return;
+
+        betAmount = money;
+        UpdateBetDisplay();
+        Debug.Log("ALL IN! Bet: $" + betAmount);
     }
 
     private void StartGame()
     {
+
+        if (money <= 0)
+        {
+            gameOver = true;
+            playerTurn = false;
+
+            if (winnerText != null)
+            {
+                winnerText.text = "You're out of money!";
+                winnerText.enabled = true;
+            }
+
+            if (exitGameObject != null)
+            {
+                exitGameObject.SetActive(true);
+            }
+
+            return;
+        }
+
+        if (betAmount <= 0 || betAmount > money)
+        {
+            if (winnerText != null)
+            {
+                winnerText.text = "Choose a valid bet!";
+                winnerText.enabled = true;
+            }
+
+            return;
+        }
+
+        if (winnerText != null)
+        {
+            winnerText.enabled = false;
+        }
+
+        money -= betAmount;
+        UpdateMoneyDisplay();
         playerTurn = true;
+        gameOver = false;
 
         for (int i = 0; i < 2; i++)
         {
             player.Push(deck.Pop());
             HitDealer();
         }
-
         Debug.Log("Your hand: " + player.HandValue());
     }
 
@@ -115,26 +225,44 @@ public class GameController : MonoBehaviour
 
         if (playerScore > 21)
         {
-            winnerText.text = "Sorry, you bust!";
+            winnerText.text = "You bust! You lose $" + betAmount;
         }
         else if (dealerScore > 21)
         {
-            winnerText.text = "You win!";
+            money += betAmount * 2;
+            winnerText.text = "You win $" + betAmount + "!";
         }
         else if (playerScore > dealerScore)
         {
-            winnerText.text = "You win!";
+            money += betAmount * 2;
+            winnerText.text = "You win $" + betAmount + "!";
         }
         else if (playerScore < dealerScore)
         {
-            winnerText.text = "You lose!";
+            winnerText.text = "You lose $" + betAmount + "!";
         }
         else
         {
-            winnerText.text = "It's a tie!";
+            money += betAmount;
+            winnerText.text = "It's a tie! Your bet is returned.";
         }
-
+        UpdateMoneyDisplay();
+        winnerText.enabled = true;
         gameOver = true;
+
+        if (money <= 0 && exitGameObject != null)
+        {
+            exitGameObject.SetActive(true);
+        }
         Debug.Log("Player: " + playerScore + " | Dealer: " + dealerScore);
+    }
+    public void ExitApplication()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        Application.Quit();
     }
 }

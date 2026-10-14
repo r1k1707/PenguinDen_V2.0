@@ -15,7 +15,14 @@ public class CardStackView : MonoBehaviour
 
     public void Toggle(int card, bool isFaceUp)
     {
-        fetchedCards[card].IsFaceUp = isFaceUp;
+        if (!fetchedCards.ContainsKey(card)) return;
+
+        CardView view = fetchedCards[card];
+        if (view.IsFaceUp == isFaceUp) return;
+
+        view.IsFaceUp = isFaceUp;
+        CardModel model = view.Card.GetComponent<CardModel>();
+        if (model != null) model.ToggleFace(isFaceUp);
     }
 
     public void Clear()
@@ -43,7 +50,7 @@ public class CardStackView : MonoBehaviour
     void deck_CardAdded(object sender, CardEventArgs e)
     {
         float co = cardOffset * deck.CardCount;
-        Vector3 temp = start + new Vector3(co, 0f);
+        Vector3 temp = transform.TransformPoint(start + new Vector3(0f, 0f, co));
         AddCard(temp, e.CardIndex, deck.CardCount, true);
     }
 
@@ -70,32 +77,18 @@ public class CardStackView : MonoBehaviour
             foreach (int i in deck.GetCards())
             {
                 float co = cardOffset * cardCount;
-                Vector3 temp = start + new Vector3(co, 0f);
+                Vector3 temp = transform.TransformPoint(start + new Vector3(0f, 0f, co));
                 AddCard(temp, i, cardCount);
                 cardCount++;
             }
         }
     }
 
-    void AddCard(Vector3 position,
-                 int cardIndex,
-                 int positionalIndex,
-                 bool doAnimation = false)
+    void AddCard(Vector3 position,int cardIndex, int positionalIndex, bool doAnimation = false)
     {
         if (fetchedCards.ContainsKey(cardIndex))
         {
-            if (!faceUp)
-            {
-                CardModel model = fetchedCards[cardIndex].Card.GetComponent<CardModel>();
-                if (doAnimation)
-                {
-                    model.ToggleFace(fetchedCards[cardIndex].IsFaceUp);
-                }
-                else
-                {
-                    model.ToggleFaceNoAnimation(fetchedCards[cardIndex].IsFaceUp);
-                }
-            }
+            fetchedCards[cardIndex].Card.transform.position = position;
             return;
         }
 
