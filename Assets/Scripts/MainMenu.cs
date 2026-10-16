@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(cutScene);
     }
     
-    public void HowToPlay()
+    public void LoadScene()
     {
         SceneManager.LoadScene(SceneName);
     }
