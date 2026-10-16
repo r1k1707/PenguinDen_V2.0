@@ -2492,6 +2492,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 45164709504824328, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1028740766498891708, guid: 87538568507ec4245b341498e6eb4d05, type: 3}
       propertyPath: m_Name
       value: VR_Rig
