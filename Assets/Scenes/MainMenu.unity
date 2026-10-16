@@ -4095,7 +4095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59cdadf9b8141149bbb674c6aca8258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  sceneName: BlackjackTest
+  sceneName: CutScene
   sceneName2: HowToPlay
 --- !u!4 &1646961920
 Transform:
