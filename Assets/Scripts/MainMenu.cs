@@ -3,16 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private string cutScene = "";
-    [SerializeField] private string SceneName = "";
+    [SerializeField] private string sceneName = "";
+    [SerializeField] private string sceneName2 = "";
     public void PlayGame()
     {
-        SceneManager.LoadScene(cutScene);
+        SceneManager.LoadScene(sceneName);
     }
     
     public void LoadScene()
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(sceneName2);
     }
     public void QuitGame()
     {
